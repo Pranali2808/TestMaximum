@@ -6,38 +6,35 @@ using System.Threading.Tasks;
 
 namespace TestMaximum
 {
-    class Maximum<T> where T : IComparable
+     class TestMax<T> where T : IComparable
     {
-        public T first, second, third;
-        public Maximum(T first, T second, T third)
+        public T[] values;
+
+        public TestMax(T[] values)        //Constructor
         {
-            this.first = first;
-            this.second = second;
-            this.third = third;
+            this.values = values;
         }
-        public static T MaxInThree(T first, T second, T third)
+
+        public T[] ArraySort()
         {
-            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
-            {
-                return first;
-            }
-            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
-            {
-                return second;
-            }
-            else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
-            {
-                return third;
-            }
-            else
-            {
-                return default;
-            }
+            Array.Sort(values);
+            return values;
+        }
+
+        public T GetMaxOfGiven(T[] genValue)
+        {
+            ArraySort();
+            int lastIndex = values.Length - 1;
+            return values[lastIndex];
         }
         public T GetMax()
         {
-            T maxValue = Maximum<T>.MaxInThree(this.first, this.second, this.third);
+            T maxValue = GetMaxOfGiven(this.values);
             return maxValue;
+        }
+        internal int MaxInThree(int intNum1, int intNum2, int intNum3)
+        {
+            throw new NotImplementedException();
         }
     }
 }

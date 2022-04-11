@@ -43,11 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="floatNum2.cs" />
-    <Compile Include="floatNum3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestMax.cs" />
+    <Compile Include="TestMax1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
