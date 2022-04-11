@@ -12,8 +12,9 @@ namespace TestMaximum
         {
             Console.WriteLine("Welcome to the Testmaximum  program");
             TestMax maximum = new TestMax();
-            Console.WriteLine("Select from below \n1. Find Max Of Three Int Number\n ");
+            Console.WriteLine("Select from given  below.....\n1. Max in Three Integers \n2 Max in Three Floats \n");
             int option = Convert.ToInt32(Console.ReadLine());
+           
             switch (option)
             {
                 case 1:
@@ -31,13 +32,27 @@ namespace TestMaximum
                     else
                         Console.WriteLine("Maximum out of given numbers {0} {1} & {2} is {3}", intNum1, intNum2, intNum3, intMax);
                     break;
+                case 2:
+                    Console.WriteLine("Enter first Float value");
+                    float floatNum1 = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter second Float value");
+                    float floatNum2 = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter third Float value");
+                    float floatNum3 = float.Parse(Console.ReadLine());
+                    float floatMax = maximum.MaxInThree((int)floatNum1, (int)floatNum2, (int)floatNum3);
+                    if (floatMax == 0)
+                    {
+                        Console.WriteLine("Two or Three numbers have equal value");
+                    }
+                    else
+                        Console.WriteLine("Maximum out of given numbers {0} {1} & {2} is {3}", floatNum1, floatNum2, floatNum3, floatMax);
+                    break;
                 default:
                     Console.WriteLine("Invalid Input");
                     break;
             }
-                    Console.ReadLine();
-            
+            Console.ReadLine();
         }
-        
     }
 }
+
