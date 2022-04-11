@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestMaximum
 {
-     class TestMax<T> where T : IComparable
+    class TestMax<T> where T : IComparable
     {
         public T[] values;
 
@@ -32,9 +32,10 @@ namespace TestMaximum
             T maxValue = GetMaxOfGiven(this.values);
             return maxValue;
         }
-        internal int MaxInThree(int intNum1, int intNum2, int intNum3)
+        public void PrintMax()
         {
-            throw new NotImplementedException();
+            T maxValue = GetMaxOfGiven(this.values);
+            Console.WriteLine("Maximum value is : " + maxValue);
         }
     }
 }

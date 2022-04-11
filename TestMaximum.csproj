@@ -46,7 +46,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestMax.cs" />
-    <Compile Include="TestMax1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
